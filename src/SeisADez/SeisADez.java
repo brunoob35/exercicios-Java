@@ -55,4 +55,19 @@ public class SeisADez {
         // retorna a variavel maior
         return maior;
     }
+
+    public static int contarVogais(String texto) {
+        // Comentario
+        int contador = 0;
+        String vogais = "aeiouAEIOU";
+
+        for (int i = 0; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+            if (vogais.indexOf(c) != -1) {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
 }

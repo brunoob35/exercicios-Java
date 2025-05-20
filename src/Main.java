@@ -46,7 +46,15 @@ public static void main(String[] args) {
                 break;
 
             case 8:
-                //realizarEmprestimo();
+
+                System.out.print("Digite uma frase ou palavra: ");
+                String entrada = scanner.nextLine();
+
+                int totalVogais = SeisADez.contarVogais(entrada);
+                System.out.println("Total de vogais: " + totalVogais);
+
+                scanner.close();
+
                 break;
             case 9:
                 //listarLivros();
