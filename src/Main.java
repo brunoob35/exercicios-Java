@@ -109,9 +109,11 @@ public static void main(String[] args) {
                 break;
 
             case 10:
+
                 int[] arrayEmbaralhado = {42, 7, 13, 5, 99, 1};
                 SeisADez.ordenarArrayCrescente(arrayEmbaralhado);
                 break;
+
             case 0:
                 System.out.println("Saindo...");
                 break;
