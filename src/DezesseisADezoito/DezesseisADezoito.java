@@ -9,7 +9,7 @@ public class DezesseisADezoito {
     public static void ValidaSenha(){
 
         System.out.print("Digite uma senha: ");
-        Scanner scanner = null;
+        Scanner scanner = new Scanner(System.in);
         String senha = scanner.nextLine(); // Lê a senha digitada pelo usuário
 
         // Verifica os critérios da senha:
@@ -44,7 +44,7 @@ public class DezesseisADezoito {
         System.out.println("Você tem até " + maxTentativas + " tentativas.");
 
         // Repete até acertar ou acabar as tentativas
-        Scanner scanner = null;
+        Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("Tentativa #" + (tentativas + 1) + ": ");
             tentativa = scanner.nextInt(); // Lê o número digitado
@@ -73,7 +73,7 @@ public class DezesseisADezoito {
     // QUESTÃO 18 – Contador de Palavras
     public static void ContadorPalavras(){
         System.out.print("Digite uma frase: ");
-        Scanner scanner = null;
+        Scanner scanner = new Scanner(System.in);
         String frase = scanner.nextLine(); // Lê a frase completa
 
         // Divide a frase usando espaços como separador (pode ser mais de um espaço)
