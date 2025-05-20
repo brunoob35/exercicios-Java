@@ -4,12 +4,12 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class DezesseisADezoito {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Scanner para entrada de dados
 
-        // QUESTÃO 16 – Validador de Senha
+    // QUESTÃO 16 – Validador de Senha
+    public static void ValidaSenha(){
 
         System.out.print("Digite uma senha: ");
+        Scanner scanner = null;
         String senha = scanner.nextLine(); // Lê a senha digitada pelo usuário
 
         // Verifica os critérios da senha:
@@ -18,9 +18,9 @@ public class DezesseisADezoito {
         // - Pelo menos uma letra minúscula
         // - Pelo menos um número
         if (senha.length() >= 8 &&
-            senha.matches(".*[A-Z].*") &&
-            senha.matches(".*[a-z].*") &&
-            senha.matches(".*\\d.*")) {
+                senha.matches(".*[A-Z].*") &&
+                senha.matches(".*[a-z].*") &&
+                senha.matches(".*\\d.*")) {
             System.out.println("Senha válida!");
         } else {
             System.out.println("Senha inválida! A senha deve conter:");
@@ -29,9 +29,11 @@ public class DezesseisADezoito {
             System.out.println("- Pelo menos uma letra minúscula");
             System.out.println("- Pelo menos um número");
         }
+    }
 
-        // QUESTÃO 17 – Jogo de Adivinhação
-        
+    // QUESTÃO 17 – Jogo de Adivinhação
+
+    public static void Adivinhador(){
         Random rand = new Random(); // Criador de número aleatório
         int numeroSecreto = rand.nextInt(100) + 1; // Número aleatório entre 1 e 100
         int tentativa;
@@ -42,6 +44,7 @@ public class DezesseisADezoito {
         System.out.println("Você tem até " + maxTentativas + " tentativas.");
 
         // Repete até acertar ou acabar as tentativas
+        Scanner scanner = null;
         do {
             System.out.print("Tentativa #" + (tentativas + 1) + ": ");
             tentativa = scanner.nextInt(); // Lê o número digitado
@@ -64,10 +67,13 @@ public class DezesseisADezoito {
         } while (tentativas < maxTentativas);
 
         scanner.nextLine(); // Limpa o buffer (depois de nextInt)
+    }
 
-        // QUESTÃO 18 – Contador de Palavras
-        
+
+    // QUESTÃO 18 – Contador de Palavras
+    public static void ContadorPalavras(){
         System.out.print("Digite uma frase: ");
+        Scanner scanner = null;
         String frase = scanner.nextLine(); // Lê a frase completa
 
         // Divide a frase usando espaços como separador (pode ser mais de um espaço)

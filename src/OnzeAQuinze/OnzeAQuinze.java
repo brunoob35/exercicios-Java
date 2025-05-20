@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class OnzeAQuinze {
 
-    public static void main(String[] args) {
+    public static void main() {
         System.out.println("--- Exercício 11: Pessoa ---");
         Pessoa pessoa = new Pessoa("João", 30);
         pessoa.exibirInformacoes();

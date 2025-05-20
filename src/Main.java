@@ -1,9 +1,11 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import OnzeAQuinze.OnzeAQuinze;
 import UmACinco.*;
 import SeisADez.*;
-import OnzeAQuinze.*;
+import DezesseisADezoito.*;
 
 //    6 - Escreva um programa que leia 5 números do usuário e os armazene em um array, depois exiba todos os números.
 //    7 - Escreva um programa que encontre o maior número em um array de inteiros.
@@ -30,7 +32,6 @@ public static void main(String[] args) {
     do {
         System.out.println("\n========================");
         System.out.println("\n=== Desafio técnicos ===");
-
         System.out.println("1. Escreva um programa que receba dois números inteiros e exiba a soma deles.");
         System.out.println("2. Escreva um programa que leia um número inteiro e informe se ele é par ou ímpar.");
         System.out.println("3. Escreva um programa que calcule a média de três notas fornecidas pelo usuário.");
@@ -41,11 +42,15 @@ public static void main(String[] args) {
         System.out.println("8. Escreva um programa que conte o número de vogais em uma string fornecida pelo usuário.");
         System.out.println("9. Criar uma calculadora simples de quatro operações (+ - * /).");
         System.out.println("10. Escreva um programa que ordene um array de números em ordem crescente.");
+        System.out.println("11. Exercícios de 11 a 15 de Criação de Classes.");
+        System.out.println("16. Escreva um programa que valide uma senha.");
+        System.out.println("17. Desenvolva um jogo onde o computador sorteie um número entre 1 e 100. E o usuário tente adivinhá-lo");
+        System.out.println("18. Desenvolva um programa que conte quantas palavras existem em uma string fornecida pelo usuário..");
         System.out.println("0. Sair");
         System.out.print("Escolha uma opção: ");
 
         opcao = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine(); // Limpa o buffer
 
         switch (opcao) {
             case 1:
@@ -112,6 +117,24 @@ public static void main(String[] args) {
 
                 int[] arrayEmbaralhado = {42, 7, 13, 5, 99, 1};
                 SeisADez.ordenarArrayCrescente(arrayEmbaralhado);
+                break;
+
+            case 11:
+                // Exercícios de Criação de Classes
+                OnzeAQuinze.main();
+
+            case 16:
+
+                DezesseisADezoito.ValidaSenha();
+                break;
+
+            case 17:
+
+                DezesseisADezoito.Adivinhador();
+                break;
+
+            case 18:
+                DezesseisADezoito.ContadorPalavras();
                 break;
 
             case 0:
